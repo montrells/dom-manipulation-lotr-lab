@@ -28,6 +28,22 @@ function makeMiddleEarth() {
   // inside, add each land as an article tag
   // inside each article tag include an h1 with the name of the land
   // append middle-earth to your document body
+    console.log("hey");
+    var middleEarth = document.createElement("section");// CREATING A SECTION
+    console.log(middleEarth);                           // PRINTING MIDDLE EARTH TO THE CONSOLE
+    middleEarth.setAttribute("id", "middle-earth");     // SETTING THE ID TO MIDDLE-EARTH
+    console.log(middleEarth);                           // PRINTING MIDDLE EARTH TO CONSOLE
+    for (var i = 0; i < lands.length; i++){             // LOOPING THE LANDS
+      console.log(lands[i]);
+      var newLand = document.createElement('article');  // CREATING ARTICLE ELEMENT AND PUTTING IT IN THE NEWLAND
+      var newHeading = document.createElement('h1');    // CREATING H1 ELEMENT AND PUTTING IT IN THE NEWHEADING
+      newHeading.innerHTML = lands[i];                  // ADDING MORE HTML THE DOCUMENT
+      newLand.appendChild(newHeading);                  // APPENDING ARTICLE
+      middleEarth.appendChild(newLand);                 // APPENDING THE H1
+    }
+    console.log(middleEarth);                           // PRINTING THE KINGDOM
+    body.appendChild(middleEarth);                      // ADDING (APPENDING) TO THE BODY
+
 }
 
 makeMiddleEarth();
@@ -38,16 +54,27 @@ makeMiddleEarth();
 function makeHobbits() {
   // display an unordered list of hobbits in the shire (which is the first article tag on the page)
   // give each hobbit a class of hobbit
-}
+    console.log(hobbits);
+    for (var i = 0; i < hobbits.length; i++){
 
+        console.log(document.querySelector(hobbits[i]).setAttribute("hobbits", "classHobbits"));
+    }
+
+}
+makeHobbits();
 
 // Part 3
 
 function keepItSecretKeepItSafe() {
   // create a div with an id of 'the-ring'
+    var theRing = document.createElement('div');
+    theRing.setAttribute("id", 'the-ring');
   // give the div a class of 'magic-imbued-jewelry'
+
   // add an event listener so that when a user clicks on the ring, the nazgulScreech function (provided) is invoked
   // add the ring as a child of Frodo
+
+
 }
 
 
