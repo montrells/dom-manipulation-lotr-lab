@@ -75,7 +75,7 @@ makeHobbits();
 
 var frodo = body.querySelectorAll('li')[0];
 
-function keepItSecretKeeprivendellItSafe() {
+function keepItSafe() {
     // create a div with an id of 'the-ring'
     var ring = document.createElement('div');
     ring.setAttribute('id', 'the-ring');
@@ -83,11 +83,11 @@ function keepItSecretKeeprivendellItSafe() {
     ring.setAttribute('class', 'magic-imbued-jewelry');
     // add an event listener so that when a user clicks on the ring, the nazgulScreech function (provided) is invoked
     ring.addEventListener('click', nazgulScreech);
-    // add the ring as a child of Frodo
+    // add the ring as a child o;f Frodo
     frodo.appendChild(ring);
 }
 
-keepItSecretKeepItSafe()
+keepItSafe()
 // Part 4
 
 function makeBuddies() {
@@ -119,11 +119,17 @@ beautifulStranger();
 
 function leaveTheShire() {
   // assemble the hobbits and move them to Rivendell
-
-    var hob = document.getElementsByClassName('hobbit');
-    rivendell.appendChild(hob);
-
+    var hob = document.querySelectorAll('.hobbit');
+    var rivenHobs = document.createElement('ul');
+    for (let i =0; i < hob.length; i++){
+        console.log(hob[1]);
+        rivenHobs.appendChild(hob[i])
+    }
+    rivendell.appendChild(rivenHobs);
 }
+
+    //var hob = document.getElementsByClassName('hobbit');
+
 leaveTheShire();
 
 // Part 7
