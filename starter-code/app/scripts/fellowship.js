@@ -75,7 +75,7 @@ makeHobbits();
 
 var frodo = body.querySelectorAll('li')[0];
 
-function keepItSecretKeepItSafe() {
+function keepItSecretKeeprivendellItSafe() {
     // create a div with an id of 'the-ring'
     var ring = document.createElement('div');
     ring.setAttribute('id', 'the-ring');
@@ -119,7 +119,10 @@ beautifulStranger();
 
 function leaveTheShire() {
   // assemble the hobbits and move them to Rivendell
-    rivendell.appendChild(hobbits);
+
+    var hob = document.getElementsByClassName('hobbit');
+    rivendell.appendChild(hob);
+
 }
 leaveTheShire();
 
